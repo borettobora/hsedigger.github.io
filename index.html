@@ -354,12 +354,18 @@
 
   <div class="form-wrap">
     <p class="form-label"><span data-tr="Lansman haberdar olmak için kayıt ol" data-en="Get notified when we launch">Lansman haberdar olmak için kayıt ol</span></p>
-    <div class="form-row">
-      <input type="email" id="emailInput" placeholder="email@adresin.com" />
-      <button onclick="handleSubmit()" id="notifyBtn"><span data-tr="Beni Haberdar Et" data-en="Notify me">Beni Haberdar Et</span></button>
+    <div id="mc_embed_shell">
+      <form action="https://hsedigger.us8.list-manage.com/subscribe/post?u=a4a5add27f447d540b715f789&amp;id=f05af66729&amp;f_id=00d49fe0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+        <div class="form-row">
+          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="email@adresin.com" required />
+          <div aria-hidden="true" style="position:absolute;left:-5000px;">
+            <input type="text" name="b_a4a5add27f447d540b715f789_f05af66729" tabindex="-1" value="">
+          </div>
+          <button type="submit" id="mc-embedded-subscribe"><span data-tr="Beni Haberdar Et" data-en="Notify me">Beni Haberdar Et</span></button>
+        </div>
+      </form>
     </div>
     <p class="form-note"><span data-tr="Spam yok. Asla." data-en="No spam. Ever.">Spam yok. Asla.</span></p>
-    <p class="success-msg" id="successMsg"><span data-tr="✓ Listeye eklendin!" data-en="✓ You're on the list!">✓ Listeye eklendin!</span></p>
   </div>
 
   <div class="footer">
