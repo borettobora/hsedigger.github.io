@@ -504,18 +504,18 @@ nav.scrolled {
 /* ── STICKY NEWSLETTER BAR ────────────────────── */
 .sticky-notify {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 90;
-  background: var(--navy);
-  border-top: 2px solid var(--yellow);
+  top: 0; left: 0; right: 0;
+  z-index: 89;
+  background: var(--yellow);
+  border-bottom: 2px solid var(--yellow2);
   padding: 10px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  transform: translateY(100%);
+  transform: translateY(-100%);
   transition: transform 0.4s ease;
-  box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(255,215,0,0.2);
 }
 
 .sticky-notify.visible {
@@ -532,13 +532,13 @@ nav.scrolled {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy);
   letter-spacing: 0.5px;
 }
 
 .sticky-notify-text .pill {
-  background: var(--yellow);
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--yellow);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -555,9 +555,9 @@ nav.scrolled {
 }
 
 .sticky-notify-form input {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: var(--white);
+  background: rgba(10,22,40,0.15);
+  border: 1px solid rgba(10,22,40,0.2);
+  color: var(--navy);
   font-family: 'Barlow', sans-serif;
   font-size: 13px;
   padding: 8px 14px;
@@ -566,12 +566,12 @@ nav.scrolled {
   width: 220px;
 }
 
-.sticky-notify-form input::placeholder { color: rgba(255,255,255,0.3); }
-.sticky-notify-form input:focus { border-color: var(--yellow); }
+.sticky-notify-form input::placeholder { color: rgba(10,22,40,0.4); }
+.sticky-notify-form input:focus { border-color: var(--navy); }
 
 .sticky-notify-form button {
-  background: var(--yellow);
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--yellow);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -585,12 +585,12 @@ nav.scrolled {
   transition: all 0.2s;
 }
 
-.sticky-notify-form button:hover { background: var(--yellow2); }
+.sticky-notify-form button:hover { background: #162d52; }
 
 .sticky-close {
   background: none;
   border: none;
-  color: rgba(255,255,255,0.3);
+  color: rgba(10,22,40,0.4);
   font-size: 20px;
   cursor: pointer;
   padding: 4px 8px;
@@ -598,7 +598,7 @@ nav.scrolled {
   line-height: 1;
 }
 
-.sticky-close:hover { color: var(--white); }
+.sticky-close:hover { color: var(--navy); }
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -690,8 +690,11 @@ section { padding: 100px 5%; }
 
 /* ── CATEGORIES SECTION ───────────────────────── */
 .categories {
-  background: var(--white);
+  background: var(--navy);
 }
+
+.categories .section-title { color: var(--white); }
+.categories .section-sub { color: rgba(255,255,255,0.5); }
 
 .cat-grid {
   display: grid;
@@ -1560,44 +1563,6 @@ footer {
   </div>
 </div>
 
-<!-- ── SAFETYONSITE PROMO ── -->
-<section style="background:var(--navy); padding:70px 5%; position:relative; overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, rgba(255,215,0,0.06) 0%, transparent 60%);"></div>
-  <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-    <div>
-      <div class="section-label reveal" style="color:var(--yellow);" data-tr="Öne Çıkan Uygulama" data-en="Featured App">Öne Çıkan Uygulama</div>
-      <h2 class="section-title reveal reveal-delay-1" style="color:var(--white);">Safety<span style="color:var(--yellow);">OnSite</span></h2>
-      <p style="font-size:16px;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.7;margin:16px 0 28px;max-width:420px;" class="reveal reveal-delay-2" data-tr="Saha İSG yönetimini dijitalleştiren mobil uygulama. Android'de test aşamasında, yakında iOS'ta da!" data-en="Mobile app that digitalizes field HSE management. Now in testing on Android, iOS coming soon!">Saha İSG yönetimini dijitalleştiren mobil uygulama. Android'de test aşamasında, yakında iOS'ta da!</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;" class="reveal reveal-delay-3">
-        <a href="#" style="background:var(--yellow);color:var(--navy);padding:12px 24px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;" data-tr="📱 Android'de Dene" data-en="📱 Try on Android">📱 Android'de Dene</a>
-        <a href="#" style="background:transparent;color:var(--white);padding:12px 24px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.2s;" data-tr="Daha Fazla Bilgi →" data-en="Learn More →">Daha Fazla Bilgi →</a>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="reveal reveal-delay-2">
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.1);border-radius:10px;padding:20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.3)'" onmouseout="this.style.borderColor='rgba(255,215,0,0.1)'">
-        <div style="font-size:28px;margin-bottom:10px;">📋</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:6px;" data-tr="Dijital Formlar" data-en="Digital Forms">Dijital Formlar</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;" data-tr="Kağıtsız İSG formları, anlık kayıt" data-en="Paperless HSE forms, instant records">Kağıtsız İSG formları, anlık kayıt</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.1);border-radius:10px;padding:20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.3)'" onmouseout="this.style.borderColor='rgba(255,215,0,0.1)'">
-        <div style="font-size:28px;margin-bottom:10px;">📍</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:6px;" data-tr="Saha Takibi" data-en="Site Tracking">Saha Takibi</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;" data-tr="Gerçek zamanlı konum ve durum" data-en="Real-time location & status">Gerçek zamanlı konum ve durum</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.1);border-radius:10px;padding:20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.3)'" onmouseout="this.style.borderColor='rgba(255,215,0,0.1)'">
-        <div style="font-size:28px;margin-bottom:10px;">📊</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:6px;" data-tr="Anlık Raporlama" data-en="Live Reporting">Anlık Raporlama</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;" data-tr="KPI takibi, otomatik raporlar" data-en="KPI tracking, automated reports">KPI takibi, otomatik raporlar</div>
-      </div>
-      <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:20px;">
-        <div style="font-size:28px;margin-bottom:10px;">🔔</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--yellow);text-transform:uppercase;margin-bottom:6px;" data-tr="Test Aşamasında" data-en="Beta Testing">Test Aşamasında</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;" data-tr="Android — iOS yakında" data-en="Android — iOS coming soon">Android — iOS yakında</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── COMMUNITY ── -->
 <section class="community" id="community">
   <div class="community-bg"></div>
@@ -1733,7 +1698,14 @@ footer {
     <div style="display:flex;flex-direction:column;gap:20px;" class="reveal reveal-delay-2">
       <!-- App screenshot -->
       <div style="position:relative;text-align:center;">
-        <img src="safetyonsite_app.png" alt="SafetyOnSite App Screenshot" style="max-width:300px;width:100%;filter:drop-shadow(0 20px 60px rgba(255,215,0,0.15));margin:0 auto;display:block;"/>
+        <img src="safetyonsite_app.png" alt="SafetyOnSite App Screenshot" 
+          style="max-width:300px;width:100%;filter:drop-shadow(0 20px 60px rgba(255,215,0,0.15));margin:0 auto;display:block;"
+          onerror="this.style.display='none';document.getElementById('sos-placeholder').style.display='flex'"/>
+        <div id="sos-placeholder" style="display:none;max-width:300px;margin:0 auto;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:20px;padding:40px 20px;flex-direction:column;align-items:center;gap:16px;">
+          <div style="font-size:64px;">📱</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;color:var(--yellow);letter-spacing:4px;">S·O·S</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;" data-tr="Uygulama ekran görüntüsü yakında" data-en="App screenshot coming soon">Uygulama ekran görüntüsü yakında</div>
+        </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 
