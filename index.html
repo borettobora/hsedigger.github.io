@@ -1286,6 +1286,48 @@ footer {
   color: rgba(255,255,255,0.2);
 }
 
+
+/* ── COMING SOON BADGE ───────────────────────── */
+.doc-download-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    #FFD700,
+    #FFD700 4px,
+    #0A1628 4px,
+    #0A1628 8px
+  );
+  height: 3px;
+}
+
+.doc-card-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #FFD700,
+    #FFD700 3px,
+    #0A1628 3px,
+    #0A1628 6px
+  );
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  margin-left: 6px;
+  vertical-align: middle;
+}
 /* ── MOBILE ───────────────────────────────────── */
 @media (max-width: 768px) {
   .cat-grid { grid-template-columns: 1fr; }
@@ -1500,7 +1542,10 @@ footer {
       <div class="doc-card-desc" data-tr="ISO 45001:2018 uyumlu, 14 bölümlü kapsamlı inşaat İSG planı şablonu." data-en="ISO 45001:2018 compliant 14-section comprehensive construction HSE plan template.">ISO 45001:2018 uyumlu, 14 bölümlü kapsamlı inşaat İSG planı şablonu.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge construction" data-tr="İnşaat" data-en="Construction">İnşaat</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
 
@@ -1510,7 +1555,10 @@ footer {
       <div class="doc-card-desc" data-tr="LOTO, ATEX ve proses güvenliği bölümleriyle endüstriyel tesis şablonu." data-en="Industrial facility template with LOTO, ATEX and process safety sections.">LOTO, ATEX ve proses güvenliği bölümleriyle endüstriyel tesis şablonu.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge industrial" data-tr="Endüstriyel" data-en="Industrial">Endüstriyel</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
 
@@ -1520,7 +1568,10 @@ footer {
       <div class="doc-card-desc" data-tr="18 faaliyet kategorisi, çevre tehlikeleri ve stop-work bölümü ile eksiksiz izin formu." data-en="Complete permit form with 18 activity categories, surrounding hazards and stop-work section.">18 faaliyet kategorisi, çevre tehlikeleri ve stop-work bölümü ile eksiksiz izin formu.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge both" data-tr="Her İkisi" data-en="Both">Her İkisi</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
 
@@ -1530,7 +1581,10 @@ footer {
       <div class="doc-card-desc" data-tr="15 KKD kalemi, çalışan kabul beyanı ve 3'lü imza bölümü içeren teslim formu." data-en="Issue record form with 15 PPE items, employee acknowledgement and triple sign-off.">15 KKD kalemi, çalışan kabul beyanı ve 3'lü imza bölümü içeren teslim formu.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge both" data-tr="Her İkisi" data-en="Both">Her İkisi</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
 
@@ -1540,7 +1594,10 @@ footer {
       <div class="doc-card-desc" data-tr="KPI kartlı dashboard, 6 aylık trend tablosu ve EN/Vietnamca iki dilli versiyon." data-en="Dashboard with KPI cards, 6-month trend table and bilingual EN/Vietnamese version.">KPI kartlı dashboard, 6 aylık trend tablosu ve EN/Vietnamca iki dilli versiyon.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge both" data-tr="Her İkisi" data-en="Both">Her İkisi</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
 
@@ -1550,7 +1607,10 @@ footer {
       <div class="doc-card-desc" data-tr="Sayfa başına 4 kart, lamine edilmeye hazır, ekipman/araç operatörü kimlik kartı." data-en="4 cards per page, laminate-ready identity card for equipment and vehicle operators.">Sayfa başına 4 kart, lamine edilmeye hazır, ekipman/araç operatörü kimlik kartı.</div>
       <div class="doc-card-footer">
         <span class="doc-card-badge both" data-tr="Her İkisi" data-en="Both">Her İkisi</span>
-        <button class="doc-download-btn">↓</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+        <span class="doc-card-soon">🚧 Soon</span>
+        <button class="doc-download-btn" title="Coming Soon" style="opacity:0.4;cursor:not-allowed;">↓</button>
+      </div>
       </div>
     </div>
   </div>
