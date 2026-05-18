@@ -1328,6 +1328,63 @@ footer {
   margin-left: 6px;
   vertical-align: middle;
 }
+
+/* ── NEWS CARDS ──────────────────────────────── */
+.news-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid var(--light);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: var(--yellow2);
+}
+
+.news-card-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(255,215,0,0.2);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.news-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.news-card-desc {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.news-card-source {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-top: 1px solid var(--light);
+  padding-top: 10px;
+}
+
 /* ── MOBILE ───────────────────────────────────── */
 @media (max-width: 768px) {
   .cat-grid { grid-template-columns: 1fr; }
@@ -1383,9 +1440,9 @@ footer {
   </a>
   <ul class="nav-links">
     <li><a href="#categories" data-tr="Kaynaklar" data-en="Resources">Kaynaklar</a></li>
-    <li><a href="#documents" data-tr="Belgeler" data-en="Documents">Belgeler</a></li>
     <li><a href="#community" data-tr="Topluluk" data-en="Community">Topluluk</a></li>
-    <li><a href="#" data-tr="Blog" data-en="Blog">Blog</a></li>
+    <li><a href="#news" data-tr="Haberler" data-en="News">Haberler</a></li>
+    <li><a href="#safedocai" style="color:var(--yellow);font-weight:700;position:relative;">SafeDoc<span style="color:white;">AI</span> <span style="background:var(--yellow);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:4px;letter-spacing:1px;vertical-align:middle;">NEW</span></a></li>
   </ul>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
@@ -1785,6 +1842,121 @@ footer {
   </div>
 </section>
 
+<!-- ── NEWS ── -->
+<section id="news" style="background:var(--off); padding:80px 5%;">
+  <div class="section-label reveal" data-tr="Haberler" data-en="News">Haberler</div>
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;">
+    <h2 class="section-title reveal reveal-delay-1" data-tr="Güncel İSG Haberleri" data-en="Latest HSE News">Güncel<br>İSG Haberleri</h2>
+    <p class="section-sub reveal reveal-delay-2" style="text-align:right;" data-tr="Dil seçiminize göre Türkçe veya İngilizce İSG haberleri." data-en="HSE news in Turkish or English based on your language selection."></p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" id="news-grid">
+    <!-- TR placeholders -->
+    <div class="news-card reveal">
+      <div class="news-card-tag" data-tr="Mevzuat" data-en="Regulation">Mevzuat</div>
+      <div class="news-card-title" data-tr="İSG haberleri yakında burada!" data-en="HSE news coming soon here!">İSG haberleri yakında burada!</div>
+      <div class="news-card-desc" data-tr="Türkçe seçildiğinde Türk İSG haberleri, İngilizce seçildiğinde global haberler otomatik yüklenecek." data-en="Turkish HSE news when TR selected, global news when EN selected — loading automatically.">Türkçe seçildiğinde Türk İSG haberleri, İngilizce seçildiğinde global haberler otomatik yüklenecek.</div>
+      <div class="news-card-source">İSGGM · <span data-tr="Yakında" data-en="Coming Soon">Yakında</span></div>
+    </div>
+    <div class="news-card reveal reveal-delay-1">
+      <div class="news-card-tag" data-tr="İş Kazası" data-en="Incident">İş Kazası</div>
+      <div class="news-card-title" data-tr="Sektör haberleri entegrasyonu" data-en="Industry news integration">Sektör haberleri entegrasyonu</div>
+      <div class="news-card-desc" data-tr="WordPress'e geçişle birlikte canlı RSS feed entegrasyonu yapılacak." data-en="Live RSS feed integration will be added with WordPress migration.">WordPress'e geçişle birlikte canlı RSS feed entegrasyonu yapılacak.</div>
+      <div class="news-card-source">ÇSGB · <span data-tr="Yakında" data-en="Coming Soon">Yakında</span></div>
+    </div>
+    <div class="news-card reveal reveal-delay-2">
+      <div class="news-card-tag" data-tr="Standart" data-en="Standard">Standart</div>
+      <div class="news-card-title" data-tr="ISO & Mevzuat güncellemeleri" data-en="ISO & Regulation updates">ISO & Mevzuat güncellemeleri</div>
+      <div class="news-card-desc" data-tr="ISO 45001, OHSAS ve ulusal mevzuat değişikliklerini takip edin." data-en="Follow ISO 45001, OHSAS and national regulation changes.">ISO 45001, OHSAS ve ulusal mevzuat değişikliklerini takip edin.</div>
+      <div class="news-card-source">ISO · <span data-tr="Yakında" data-en="Coming Soon">Yakında</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SAFEDOCAI ── -->
+<section id="safedocai" style="background:#060e1a; padding:120px 5%; position:relative; overflow:hidden;">
+
+  <!-- Background effects -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,215,0,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,215,0,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;"></div>
+  <div style="position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(255,215,0,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(120,40,255,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(255,215,0,0.04) 0%,transparent 50%);pointer-events:none;"></div>
+
+  <!-- Giant watermark -->
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(140px,22vw,300px);color:rgba(255,215,0,0.025);letter-spacing:-10px;white-space:nowrap;user-select:none;pointer-events:none;line-height:1;">SAFE</div>
+
+  <div style="position:relative;z-index:1;text-align:center;">
+
+    <!-- Top badge -->
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:100px;padding:8px 22px;margin-bottom:36px;" class="reveal">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--yellow);display:inline-block;animation:pulse 2s infinite;flex-shrink:0;"></span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--yellow);text-transform:uppercase;" data-tr="HSEDigger'a Özel — Yakında" data-en="HSEDigger Exclusive — Coming Soon">HSEDigger'a Özel — Yakında</span>
+    </div>
+
+    <!-- Main title -->
+    <div class="reveal reveal-delay-1">
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(72px,14vw,140px);font-weight:900;text-transform:uppercase;line-height:0.88;margin-bottom:0;letter-spacing:-2px;">
+        <span style="color:var(--white);">Safe</span><span style="color:var(--yellow);">Doc</span><span style="color:rgba(255,255,255,0.3);">AI</span>
+      </h2>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(14px,2vw,18px);font-weight:600;color:rgba(255,215,0,0.5);letter-spacing:4px;text-transform:uppercase;margin-top:12px;margin-bottom:36px;" data-tr="Yaz. Üret. İndir." data-en="Describe. Generate. Download.">Yaz. Üret. İndir.</p>
+    </div>
+
+    <!-- Description -->
+    <p style="font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,0.5);line-height:1.8;max-width:620px;margin:0 auto 52px;" class="reveal reveal-delay-2"
+      data-tr="Sektörünü seç, aktiviteni anlat — SafeDocAI saniyeler içinde ISO 45001 uyumlu, hazır İSG formunu üretsin. Risk değerlendirmeden çalışma iznine, İSG planından toolbox talk'a kadar."
+      data-en="Select your sector, describe your activity — SafeDocAI generates your ISO 45001 compliant HSE document in seconds. From risk assessments to work permits, HSE plans to toolbox talks.">
+      Sektörünü seç, aktiviteni anlat — SafeDocAI saniyeler içinde ISO 45001 uyumlu, hazır İSG formunu üretsin. Risk değerlendirmeden çalışma iznine, İSG planından toolbox talk'a kadar.
+    </p>
+
+    <!-- Feature grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:820px;margin:0 auto 52px;" class="reveal reveal-delay-2">
+
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:28px 20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.25)';this.style.background='rgba(255,215,0,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+        <div style="font-size:36px;margin-bottom:14px;">⚡</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:8px;" data-tr="Saniyeler İçinde" data-en="In Seconds">Saniyeler İçinde</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6;" data-tr="Saatler süren belge hazırlığı tarihe karıştı." data-en="Hours of document preparation — gone.">Saatler süren belge hazırlığı tarihe karıştı.</div>
+      </div>
+
+      <div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:28px 20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.4)'" onmouseout="this.style.borderColor='rgba(255,215,0,0.15)'">
+        <div style="font-size:36px;margin-bottom:14px;">🤖</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--yellow);text-transform:uppercase;margin-bottom:8px;" data-tr="Claude AI Destekli" data-en="Powered by Claude AI">Claude AI Destekli</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6;" data-tr="Dünyanın önde gelen AI'ı ile ISO 45001 uyumlu formlar." data-en="ISO 45001 compliant forms with world-leading AI.">Dünyanın önde gelen AI'ı ile ISO 45001 uyumlu formlar.</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:28px 20px;transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(255,215,0,0.25)';this.style.background='rgba(255,215,0,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+        <div style="font-size:36px;margin-bottom:14px;">🌍</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:8px;" data-tr="TR & EN İki Dilli" data-en="TR & EN Bilingual">TR & EN İki Dilli</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6;" data-tr="Türkçe ve İngilizce aynı anda, tek tıkla." data-en="Turkish and English simultaneously, one click.">Türkçe ve İngilizce aynı anda, tek tıkla.</div>
+      </div>
+
+    </div>
+
+    <!-- Supported forms -->
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:52px;" class="reveal reveal-delay-3">
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Risk Değerlendirme" data-en="Risk Assessment">Risk Değerlendirme</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Çalışma İzni (PTW)" data-en="Work Permit (PTW)">Çalışma İzni (PTW)</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="İSG Planı" data-en="HSE Plan">İSG Planı</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Toolbox Talk" data-en="Toolbox Talk">Toolbox Talk</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Olay Raporu" data-en="Incident Report">Olay Raporu</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Denetim Formu" data-en="Audit Form">Denetim Formu</span>
+      <span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-weight:600;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="Acil Durum Planı" data-en="Emergency Plan">Acil Durum Planı</span>
+      <span style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);color:var(--yellow);font-size:11px;font-weight:700;padding:6px 14px;border-radius:100px;letter-spacing:1px;" data-tr="+ Daha Fazlası" data-en="+ More Coming">+ Daha Fazlası</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal reveal-delay-3">
+      <a href="#" onclick="document.getElementById('stickyNotify').classList.add('visible');return false;"
+        style="display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--navy);padding:16px 36px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.2s;margin-right:12px;"
+        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 40px rgba(255,215,0,0.3)'"
+        onmouseout="this.style.transform='';this.style.boxShadow=''"
+        data-tr="🔔 Lansman Bildirimi Al" data-en="🔔 Get Launch Notification">
+        🔔 Lansman Bildirimi Al
+      </a>
+      <span style="font-size:13px;color:rgba(255,255,255,0.25);display:block;margin-top:16px;letter-spacing:1px;" data-tr="WordPress entegrasyonu ile birlikte yayına girecek" data-en="Launching with WordPress integration">WordPress entegrasyonu ile birlikte yayına girecek</span>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── NEWSLETTER ── -->
 <div class="newsletter">
   <div class="newsletter-inner">
@@ -1833,7 +2005,8 @@ footer {
       <h4 data-tr="Topluluk" data-en="Community">Topluluk</h4>
       <ul>
         <li><a href="#" data-tr="Forum" data-en="Forum">Forum</a></li>
-        <li><a href="#" data-tr="Blog" data-en="Blog">Blog</a></li>
+        <li><a href="#news" data-tr="Haberler" data-en="News">Haberler</a></li>
+    <li><a href="#safedocai" style="color:var(--yellow);font-weight:700;position:relative;">SafeDoc<span style="color:white;">AI</span> <span style="background:var(--yellow);color:var(--navy);font-size:9px;font-weight:800;padding:2px 6px;border-radius:4px;letter-spacing:1px;vertical-align:middle;">NEW</span></a></li>
         <li><a href="#" data-tr="Form Paylaş" data-en="Share Form">Form Paylaş</a></li>
         <li><a href="#" data-tr="Hakkında" data-en="About">Hakkında</a></li>
       </ul>
