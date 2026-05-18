@@ -854,7 +854,7 @@ section { padding: 100px 5%; }
 
 /* ── DOCUMENTS SECTION ────────────────────────── */
 .documents {
-  background: var(--off);
+  background: var(--navy);
 }
 
 .docs-header {
@@ -871,7 +871,7 @@ section { padding: 100px 5%; }
 
 .filter-btn {
   background: transparent;
-  border: 1px solid var(--light);
+  border: 1px solid rgba(255,255,255,0.08);
   color: var(--gray);
   font-family: 'Barlow', sans-serif;
   font-size: 12px;
@@ -897,7 +897,7 @@ section { padding: 100px 5%; }
 }
 
 .doc-card {
-  background: var(--white);
+  background: rgba(255,255,255,0.04);
   border-radius: 10px;
   padding: 24px;
   border: 1px solid var(--light);
@@ -931,7 +931,7 @@ section { padding: 100px 5%; }
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gray);
+  color: rgba(255,255,255,0.4);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -948,7 +948,7 @@ section { padding: 100px 5%; }
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1.2;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -956,7 +956,7 @@ section { padding: 100px 5%; }
 
 .doc-card-desc {
   font-size: 13px;
-  color: var(--gray);
+  color: rgba(255,255,255,0.45);
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -984,12 +984,12 @@ section { padding: 100px 5%; }
 
 .doc-download-btn {
   width: 32px; height: 32px;
-  background: var(--off);
+  background: rgba(255,255,255,0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--navy);
+  color: var(--white);
   font-size: 14px;
   transition: all 0.2s;
   border: none;
@@ -1520,7 +1520,7 @@ footer {
 
 <!-- ── DOCUMENTS ── -->
 <section class="documents" id="documents">
-  <div class="docs-header">
+  <div class="docs-header" style="color:var(--white);">
     <div>
       <div class="section-label reveal" data-tr="Belgeler" data-en="Documents">Belgeler</div>
       <h2 class="section-title reveal reveal-delay-1" data-tr="Son Eklenenler" data-en="Latest Resources">Son<br>Eklenenler</h2>
@@ -1668,7 +1668,7 @@ footer {
       <!-- App screenshot -->
       <div style="position:relative;text-align:center;">
         <img src="safetyonsite_app.png" alt="SafetyOnSite App Screenshot" 
-          style="max-width:420px;width:100%;filter:drop-shadow(0 20px 60px rgba(255,215,0,0.25));margin:0 auto;display:block;"
+          style="max-width:500px;width:100%;filter:drop-shadow(0 30px 80px rgba(255,215,0,0.35));margin:0 auto;display:block;border-radius:24px;"
           onerror="this.style.display='none';document.getElementById('sos-placeholder').style.display='flex'"/>
         <div id="sos-placeholder" style="display:none;max-width:300px;margin:0 auto;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:20px;padding:40px 20px;flex-direction:column;align-items:center;gap:16px;">
           <div style="font-size:64px;">📱</div>
